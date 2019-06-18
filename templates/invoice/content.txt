@@ -1,0 +1,51 @@
+This is an invoice for your purchase on {{ purchase_date }}. Please submit payment by {{ due_date }}
+
+{{ product_name }} ( {{ product_url }} )
+
+************
+Hi {{name}},
+************
+
+Thanks for using {{ product_name }}. This is an invoice for your recent purchase.
+
+Amount Due: {{total}}
+
+Due By: {{due_date}}
+
+Pay this Invoice ( {{ action_url }} )
+
+{{invoice_id}}
+--------------
+
+{{date}}
+--------
+
+Description
+
+Amount
+
+{{#each invoice_details}}
+
+{{description}}
+{{amount}}
+
+{{/each}}
+
+Total
+
+{{total}}
+
+If you have any questions about this invoice, simply reply to this email or reach out to our support team ( {{ support_url }} ) for help.
+
+Cheers,
+The {{ product_name }} Team
+
+If you’re having trouble with the button above, copy and paste the URL below into your web browser.
+
+{{action_url}}
+
+© 2019 {{ product_name }}. All rights reserved.
+
+{{ company_name }}
+
+{{ company_address }}
