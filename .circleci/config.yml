@@ -17,4 +17,4 @@ jobs:
       - run:
         name: Send notification email
         command: |
-          postmark email raw -f=fromemail@example.com -t=youremail@example.com --subject="[CircleCI] Templates pushed" --text="Templates have been pushed to Postmark - $CIRCLE_BUILD_URL"
+          postmark email raw -f=support@pigeonbot.com -t=derek@wildbit.com --subject="[CircleCI] Templates pushed" --text="Templates have been pushed to Postmark - $CIRCLE_BUILD_URL"
