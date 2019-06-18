@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+    - "lts/*"
+before_deploy:
+  - npm i postmark-cli -g
+deploy:
+  provider: script
+  script: postmark templates push ./templates -f
+  on:
+    branch: master 
