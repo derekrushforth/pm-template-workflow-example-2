@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  build:
+    branches:
+      only: master
+    machine: true
+    steps:
+      - checkout
+      - run:
+          name: Install Postmark-cli
+          command: |
+            npm i postmark-cli -g
+      - run:
+          name: Push templates to Postmark
+          command: |
+            postmark templates push ./templates -f
