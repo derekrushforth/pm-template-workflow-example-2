@@ -9,3 +9,5 @@ deploy:
   script: postmark templates push ./templates -f
   on:
     branch: master 
+after_deploy:
+  - postmark email raw -f=support@pigeonbot.com -t=derek@wildbit.com --subject="[Travis CI] Templates pushed" --text="Templates have been pushed to Postmark - $TRAVIS_BUILD_WEB_URL"
