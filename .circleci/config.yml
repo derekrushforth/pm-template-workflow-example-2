@@ -14,3 +14,7 @@ jobs:
           name: Push templates to Postmark
           command: |
             postmark templates push ./templates -f
+      - run:
+        name: Send notification email
+        command: |
+          postmark email raw -f=fromemail@example.com -t=youremail@example.com --subject="[CircleCI] Templates pushed" --text="Templates have been pushed to Postmark - $CIRCLE_BUILD_URL"
