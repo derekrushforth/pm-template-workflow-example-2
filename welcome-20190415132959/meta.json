@@ -1,0 +1,5 @@
+{
+  "Name": "Welcome",
+  "Alias": "welcome-20190415132959",
+  "Subject": "Welcome to {{product_name}}, {{name}}!"
+}
