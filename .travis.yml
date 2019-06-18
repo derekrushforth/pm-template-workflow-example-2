@@ -1,6 +1,7 @@
 language: node_js
 node_js:
     - "lts/*"
+script: true
 before_deploy:
   - npm i postmark-cli -g
 deploy:
